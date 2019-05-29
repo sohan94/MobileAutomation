@@ -112,8 +112,6 @@ public class MobileAPI2 {
      * @param Offset    The offset for the driver, eg. If you want to swipe 'up', then
      *                  the offset is the number of pixels you want to leave from the
      *                  bottom of the screen t start the swipe.
-     * @Author - Zann
-     * @Modified By -
      */
 
     public static void functionSwipe(String Direction, int swipeTime, int Offset) {
@@ -122,6 +120,7 @@ public class MobileAPI2 {
         int starty = (int) (size.height * 0.80);
         int endy = (int) (size.height * 0.20);
         int startx = size.width / 2;
+
         if (Direction.equalsIgnoreCase("Up")) {
             ((AppiumDriver<WebElement>) (appiumDriver)).swipe(startx / 2, starty - Offset, startx / 2, endy, swipeTime);
         } else if (Direction.equalsIgnoreCase("Down")) {

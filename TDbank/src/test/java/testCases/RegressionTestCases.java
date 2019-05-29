@@ -17,9 +17,19 @@ public class RegressionTestCases extends MobileAPI2 {
         accountPage = PageFactory.initElements(appiumDriver, AccountPage.class);
     }
 
-    @Test
+
     public void testAccountFunctionallity() {
         homePage.clickAccount();
         accountPage.sendKeyAccount();
+    }
+    @Test
+    public void swipeDown() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        functionSwipe("up", 200, 200);
+
     }
 }
